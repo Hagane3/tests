@@ -11,6 +11,10 @@ exports.createElement = (type, text, className) => {
   return newElement;
 };
 
+exports.checkSum = (num1, num2) => {
+  return num1 + num2;
+};
+
 const validateInput = (text, notEmpty, isNumber) => {
   // Validate user input with two pre-defined rules
   if (!text) {

@@ -1,9 +1,19 @@
 const puppeteer = require("puppeteer");
-const { generateText, checkAndGenerate, validateInput } = require("./util");
+const {
+  generateText,
+  checkAndGenerate,
+  validateInput,
+  checkSum,
+} = require("./util");
 
 test("Should output name and age", () => {
   const text = generateText("Konrad", 26);
   expect(text).toBe("Konrad (26 years old)");
+});
+
+test("Should output sum of two numbers", () => {
+  const math = checkSum(20, 50);
+  expect(math).toBe(70);
 });
 
 test("Should generate a valid text output", () => {
